@@ -1,8 +1,4 @@
-Here’s your comment block rewritten in the same professional structure as your Silver and Bronze stored procedures, with formatting suitable for GitHub, team projects, or production documentation:
 
-sql
-Copy
-Edit
 /*
 ===============================================================================
  Script Name     : Create Database and Schemas
@@ -35,3 +31,28 @@ Edit
  Last Modified   : 2025-07-28
 ===============================================================================
 */
+--Drop and recreate the  'DataWarehouse' datbase 
+IF EXISTS ( select 1 from sys.databases where name = 'DataWarehouse')
+Begin
+alter database DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+DROP DATABASE DataWarehouse;
+END;
+GO
+
+
+
+
+-- create the 'DataWarehouse'database
+CREATE DATABASE DataWarehouse; 
+Go
+
+
+use DataWarehouse;
+
+-- create schemas
+create schema bronze;
+Go
+create schema silver;
+Go
+create schema gold;
+GO
