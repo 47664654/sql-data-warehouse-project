@@ -1,28 +1,38 @@
 /*
-***************************************************************************************
-  Name        :
-  Purpose     : Loads data into the Bronze Layer of the data warehouse from CSV files.
-                This procedure performs a full refresh of multiple CRM and ERP tables
-                by truncating existing data and loading new data using BULK INSERT.
-                
-  Description :
-    - Logs load start and end times
-    - Truncates and reloads:
-        * CRM tables: crm_cust_info, crm_prd_info, crm_sales_details
-        * ERP tables: erp_CUST_AZ12, erp_LOC_A101, erp_PX_CAT_G1V2
-    - Handles errors using TRY...CATCH with basic logging for troubleshooting
+===============================================================================
+ Stored Procedure : bronze.load_bronze
+ Purpose          : Loads raw data into the Bronze Layer of the data warehouse 
+                    from flat CSV files using BULK INSERT.
 
-  Author      : Amine Bouraoui
-  Created On  : 26/07/2025
-  Modified On : 28/07/2025
-  Dependencies: CSV files must be present at specified paths on the server
-  Notes       :
-    - Intended for dev/test/demo; update file paths or use variables for production
-    - Requires access to the 'bronze' schema and BULK INSERT permissions
-  Usage Example : 
-    - EXEC bronze.load_bronze;
+ Description      : 
+    This procedure performs a full refresh of multiple CRM and ERP staging tables 
+    by truncating existing data and loading fresh data from CSV sources. It includes:
+        - Logging of load start and end times
+        - Truncation and reloading of the following tables:
+            * CRM Tables: crm_cust_info, crm_prd_info, crm_sales_details
+            * ERP Tables: erp_CUST_AZ12, erp_LOC_A101, erp_PX_CAT_G1V2
+        - Basic error handling and troubleshooting via TRY...CATCH
 
-***************************************************************************************
+ Parameters       : None
+
+ Returns          : None
+
+ Dependencies     : 
+    - CSV files must exist at the defined file paths on the server
+    - User must have BULK INSERT permissions
+    - Access to the 'bronze' schema is required
+
+ Notes            :
+    - This procedure is intended for development, testing, or demo environments.
+    - For production, use configurable file paths or external metadata.
+
+ Usage            : 
+    EXEC bronze.load_bronze;
+
+ Author           : Amine Bouraoui
+ Created On       : 2025-07-26
+ Last Modified    : 2025-07-28
+===============================================================================
 */
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS 
