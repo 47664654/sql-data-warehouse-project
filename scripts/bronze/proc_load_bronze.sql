@@ -14,7 +14,7 @@
 
   Author      : Amine Bouraoui
   Created On  : 26/07/2025
-  Modified On : 26/07/2025
+  Modified On : 28/07/2025
   Dependencies: CSV files must be present at specified paths on the server
   Notes       :
     - Intended for dev/test/demo; update file paths or use variables for production
@@ -27,6 +27,9 @@
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS 
 BEGIN
+	--------   BRONZE LAYER   --------
+	----------------CRM----------------
+	--- bronze.crm_cust_info
 	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME,@BATCH_end_time DATETIME;
 	BEGIN TRY
 		SET @batch_start_time = GETDATE();
@@ -55,6 +58,8 @@ BEGIN
 		PRINT'>> Load Duration: '+  CAST (DATEDIFF(second,@start_time,@end_time) AS NVARCHAR) + ' Seconds';
 		PRINT'>> -----------';
 		
+	----------------------------------
+	--- bronze.crm_prd_info
 		SET @start_time = GETDATE();
 		PRINT'>> Truncating Table: bronze.crm_prd_info';
 		truncate table bronze.crm_prd_info; -- refreshing the table , so the data don't load twice 
@@ -72,6 +77,8 @@ BEGIN
 		PRINT'>> -----------';
 		
 		
+	 ----------------------------------
+	 -- bronze.crm_sales_details
 		SET @start_time = GETDATE();
 		PRINT'>> Truncating Table: bronze.crm_sales_details';
 		truncate table bronze.crm_sales_details; -- refreshing the table , so the data don't load twice 
@@ -88,6 +95,11 @@ BEGIN
 		PRINT'>> Load Duration: '+  CAST (DATEDIFF(second,@start_time,@end_time) AS NVARCHAR) + ' Seconds';
 		PRINT'>> -----------';
 
+
+
+     --====================================--
+	 ----------------ERP---------------------
+	  -- silver.erp_CUST_AZ12
 
 		PRINT'--------------------------------------------';
 		PRINT'Loading ERP Tables';
@@ -109,7 +121,8 @@ BEGIN
 		PRINT'>> Load Duration: '+  CAST (DATEDIFF(second,@start_time,@end_time) AS NVARCHAR) + ' Seconds';
 		PRINT'>> -----------';
 
-
+	----------------------------------
+	--silver.erp_LOC_A101
 		SET @start_time = GETDATE();
 		PRINT'>> Truncating Table: bronze.erp_LOC_A101';
 		truncate table bronze.erp_LOC_A101; -- refreshing the table , so the data don't load twice 
@@ -126,7 +139,8 @@ BEGIN
 		PRINT'>> Load Duration: '+  CAST (DATEDIFF(second,@start_time,@end_time) AS NVARCHAR) + ' Seconds';
 		PRINT'>> -----------';
 		
-		
+	----------------------------------
+	-- silver.erp_PX_CAT_G1V2
 		SET @start_time = GETDATE();		
 		PRINT'>> Truncating Table: bronze.erp_PX_CAT_G1V2';
 		truncate table bronze.erp_PX_CAT_G1V2; -- refreshing the table , so the data don't load twice 
