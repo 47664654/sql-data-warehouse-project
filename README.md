@@ -71,7 +71,7 @@ This project is ideal for professionals aspiring to roles like:
 * Product performance across time
 * Regional & temporal sales trends
 
-For a complete breakdown, see [docs/requirements.md](docs/requirements.md).
+For a complete breakdown, see [docs/requirements.md](https://github.com/47664654/sql-data-warehouse-project/tree/main/docs).
 
 ---
 
