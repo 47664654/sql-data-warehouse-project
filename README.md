@@ -129,7 +129,3 @@ Or check out more of my work on GitHub: [github](https://github.com/47664654)
 ## 📄 License
 
 This project is licensed under the [MIT License](https://github.com/47664654/sql-data-warehouse-project/blob/main/LICENSE). You are free to use, modify, and share it with proper attribution.
-
----
-
-Would you like me to export this into a ready-to-paste `README.md` format with Markdown formatting and links added where needed?
