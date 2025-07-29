@@ -121,14 +121,14 @@ See `tests/` folder for details.
 Hi! I’m **Amine Bouraoui**, an aspiring Data Analyst and Engineer.
 This project is part of my professional portfolio to demonstrate skills in data architecture, SQL development, and analytical problem-solving.
 
-Let’s connect on LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-Or check out more of my work on GitHub: [github.com/your-username](https://github.com/your-username)
+Let’s connect on LinkedIn: [linkedin](https://www.linkedin.com/in/amine-bouraoui-4b103631b/)
+Or check out more of my work on GitHub: [github](https://github.com/47664654)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share it with proper attribution.
+This project is licensed under the [MIT License](https://github.com/47664654/sql-data-warehouse-project/blob/main/LICENSE). You are free to use, modify, and share it with proper attribution.
 
 ---
 
