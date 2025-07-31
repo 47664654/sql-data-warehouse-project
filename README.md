@@ -74,6 +74,7 @@ This project is ideal for professionals aspiring to roles like:
 For a complete breakdown, see [docs/requirements.md](https://github.com/47664654/sql-data-warehouse-project/tree/main/docs).
 
 📁 data-warehouse-project/
+---
 │
 ├── datasets/                           # Raw CSV files from ERP and CRM systems
 │
@@ -99,7 +100,7 @@ For a complete breakdown, see [docs/requirements.md](https://github.com/47664654
 ├── LICENSE                             # Project license (MIT by default)
 ├── .gitignore                          # Files/directories to ignore in version control
 └── requirements.txt                    # Optional: tools, dependencies, or extensions used
-
+---
 
 ---
 
