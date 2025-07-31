@@ -1,131 +1,143 @@
-# 📊 Data Warehouse and Analytics Project
-
-Welcome to the **Data Warehouse and Analytics Project**! 🚀
-This project showcases the full lifecycle of a data warehouse solution—starting from raw data ingestion to business-ready analytics—designed to demonstrate expertise in data engineering, modeling, and analysis.
+Here is a **complete, professional, and modern `README.md`** for your project, updated to reflect the **EDA scripts**, **customer and product reports**, and your **directory structure**.
 
 ---
 
-## 🧱 Data Architecture: Medallion Model
+````markdown
+# 📊 Data Warehouse & Analytics Project
 
-The architecture follows the modern **Medallion Architecture** pattern, dividing the pipeline into three layers:
-
-![Data Architecture](https://github.com/47664654/sql-data-warehouse-project/blob/main/docs/data_architecture.png)
-
-1. **🔸 Bronze Layer**: Raw data ingested as-is from CSV files (ERP & CRM systems) into SQL Server.
-2. **⚪ Silver Layer**: Cleansed and standardized data, enriched for integration across domains.
-3. **⭐ Gold Layer**: Curated, business-ready data modeled in a star schema for analytics and reporting.
+Welcome to the Data Warehouse & Analytics Project! 🚀  
+This project demonstrates a full data lifecycle using the **Medallion Architecture** on SQL Server—from raw ingestion to business-ready insights—designed to showcase expertise in **data engineering**, **SQL development**, and **data analysis**.
 
 ---
 
-## 🗂️ Project Overview
+## 🧱 Architecture: Medallion Model
 
-This project covers the entire process of building a scalable analytics platform:
+The data warehouse is structured into **three core layers**:
 
-* **📐 Data Architecture Design**: Structuring the warehouse using Bronze, Silver, and Gold layers.
-* **⚙️ ETL Pipeline Development**: Extracting, transforming, and loading data using T-SQL scripts.
-* **🏛️ Data Modeling**: Designing a dimensional model with fact and dimension tables.
-* **📈 Analytical Insights**: Writing SQL queries to deliver insights into customer behavior, product performance, and sales trends.
+- 🔸 **Bronze Layer**: Raw ERP & CRM data ingested directly from CSV files.
+- ⚪ **Silver Layer**: Cleaned, standardized, and enriched data, integrated across systems.
+- ⭐ **Gold Layer**: Business-ready data modeled in a **star schema** to power analytics and reporting.
 
-This project is ideal for professionals aspiring to roles like:
-
-* Data Analyst
-* Data Engineer
-* Business Intelligence Developer
-* ETL Developer
-* SQL Developer
+Each layer is implemented using modular **T-SQL scripts**, allowing for scalability and clarity.
 
 ---
 
-## 🧰 Tools & Resources
+## 📌 Project Objectives
 
-* **SQL Server Express** – Local database engine for development
-* **SQL Server Management Studio (SSMS)** – GUI for writing SQL scripts
-* **CSV Datasets** – ERP & CRM data for sales, customers, and products
-* **Draw\.io** – Data architecture and modeling diagrams
-* **Notion** – Task tracking and project documentation
+This project simulates a realistic end-to-end business intelligence pipeline:
+
+### 🏗️ Data Engineering
+- Design and build a **data warehouse** with Bronze/Silver/Gold layers.
+- Implement **ETL logic** using T-SQL.
+- Apply **data quality validation** at multiple stages.
+- Model data using **fact** and **dimension** tables (star schema).
+
+### 📊 Data Analysis
+- Perform **Exploratory Data Analysis (EDA)** using SQL.
+- Generate focused reports on:
+  - **Customer segmentation**, behavior, and churn.
+  - **Product performance** over time.
+  - **Regional and seasonal trends** in sales.
 
 ---
 
-## 📦 Project Requirements
+## 🧰 Tools & Technologies
 
-### 🏗️ Data Engineering Phase
+| Tool                     | Purpose                                 |
+|--------------------------|-----------------------------------------|
+| **SQL Server Express**   | Local database engine                   |
+| **SQL Server Management Studio (SSMS)** | SQL query editor and DB management |
+| **CSV Files**            | Source data from ERP and CRM systems    |
+| **Draw.io**              | Visualizing architecture and data models |
+| **Notion**               | Task tracking and project notes         |
 
-**Goal**: Build a structured, maintainable data warehouse for downstream analytics.
-
-**Specifications**:
-
-* Source: Two systems (ERP and CRM), delivered as CSV files
-* Database: SQL Server (local)
-* ETL Logic: Separate layers for raw, cleansed, and business data
-* Modeling: Star schema (fact + dimension tables)
-* Scope: Latest data only, no historization
-* Validation: Quality checks for uniqueness, integrity, and schema compliance
-
-### 📊 Analytics & Reporting Phase
-
-**Goal**: Perform exploratory analysis and derive business insights using SQL.
-
-**Focus Areas**:
-
-* Customer segmentation & churn behavior
-* Product performance across time
-* Regional & temporal sales trends
-
-For a complete breakdown, see [docs/requirements.md](https://github.com/47664654/sql-data-warehouse-project/tree/main/docs).
-
-📁 data-warehouse-project/
 ---
+
+## 📁 Folder Structure
+
+```bash
+data-warehouse-project/
 │
-├── datasets/                           # Raw CSV files from ERP and CRM systems
+├── datasets/                           # Raw CSV files (ERP & CRM)
 │
-├── docs/                               # Project documentation and diagrams
-│   ├── data_architecture.drawio        # Medallion architecture diagram
-│   ├── data_flow.drawio                # End-to-end data flow overview
-│   ├── data_models.drawio              # ERD and dimensional model design
-│   ├── naming-conventions.md           # Standard naming practices for tables and columns
-│   ├── data_catalog.md                 # Data dictionary with table/column definitions
+├── docs/                               # Project documentation
+│   ├── data_architecture.drawio        # Medallion model diagram
+│   ├── data_flow.drawio                # ETL process overview
+│   ├── data_models.drawio              # Dimensional model (ERD)
+│   ├── naming-conventions.md           # SQL naming standards
+│   ├── data_catalog.md                 # Data dictionary
 │
-├── scripts/                            # SQL scripts organized by layer
-│   ├── bronze/                         # Raw data ingestion scripts (from CSV)
-│   ├── silver/                         # Data cleaning, standardization, and integration
-│   ├── gold/                           # Star schema creation (fact & dimension tables)
-│   ├── eda/                            # Exploratory Data Analysis scripts
-│   ├── reports/                        # Business-focused analytical reports
-│       ├── report_customers.sql       # Customer behavior and segmentation report
-│       ├── report_products.sql        # Product performance and sales metrics report
+├── scripts/                            # All SQL scripts
+│   ├── bronze/                         # Raw data ingestion
+│   ├── silver/                         # Data cleansing and integration
+│   ├── gold/                           # Star schema and business logic
+│   ├── eda/                            # Exploratory Data Analysis queries
+│   ├── reports/                        # Business reports
+│       ├── report_customers.sql        # Customer segmentation & churn
+│       ├── report_products.sql         # Product performance analysis
 │
-├── tests/                              # SQL scripts for data quality and validation checks
+├── tests/                              # Data quality checks
+│   └── integrity_checks.sql            # Foreign key, null, duplicate validations
 │
-├── README.md                           # Project overview, usage, and documentation
-├── LICENSE                             # Project license (MIT by default)
-├── .gitignore                          # Files/directories to ignore in version control
-└── requirements.txt                    # Optional: tools, dependencies, or extensions used
+├── README.md                           # Project overview
+├── LICENSE                             # MIT License
+├── .gitignore                          # Version control exclusions
+└── requirements.txt                    # Optional tools/dependencies
+````
+
 ---
 
+## ✅ Data Quality Focus
+
+To ensure trustworthy data analytics, the following validations were performed:
+
+* ✅ Surrogate key uniqueness in dimension tables
+* ✅ Referential integrity across fact/dimension joins
+* ✅ Schema consistency, null-checks, and outlier detection
+* ✅ Deduplication logic for Silver Layer
+
 ---
 
-## ✅ Data Quality and Testing
+## 📈 Reporting & Insights
 
-To ensure accuracy and reliability, the project includes quality checks such as:
+After building the Gold Layer, analytical insights were extracted using SQL, focusing on:
 
-* Surrogate key uniqueness in dimensions
-* Referential integrity between fact and dimensions
-* Detection of missing or inconsistent records
+* **Customer Segments**: High vs low spenders, churn patterns, frequency of orders.
+* **Product Analytics**: Top-performing categories, sales seasonality, pricing patterns.
+* **Sales Trends**: Regional patterns, monthly and yearly growth.
 
-See `tests/` folder for details.
+Example queries and visuals can be found in:
+
+* `scripts/reports/report_customers.sql`
+* `scripts/reports/report_products.sql`
 
 ---
 
 ## 🧑‍💻 About the Developer
 
-Hi! I’m **Amine Bouraoui**, an aspiring Data Analyst and Engineer.
-This project is part of my professional portfolio to demonstrate skills in data architecture, SQL development, and analytical problem-solving.
+Hi, I’m **Amine Bouraoui**, an aspiring **Data Analyst & Engineer**.
+This project is part of my professional portfolio, showcasing my skills in:
 
-Let’s connect on LinkedIn: [linkedin](https://www.linkedin.com/in/amine-bouraoui-4b103631b/)
-Or check out more of my work on GitHub: [github](https://github.com/47664654)
+* Data architecture & warehousing
+* SQL development (ETL, modeling, analytics)
+* Business insight generation through data
+
+📎 [Connect with me on LinkedIn](https://www.linkedin.com/in/amine-bouraoui)
+📁 [Explore more projects on GitHub](https://github.com/aminebouraoui)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](https://github.com/47664654/sql-data-warehouse-project/blob/main/LICENSE). You are free to use, modify, and share it with proper attribution.
+This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
+
+```
+
+---
+
+### ✅ Tips to Finalize:
+- Replace placeholder links (LinkedIn/GitHub) with your actual profiles.
+- If you create charts or visuals in the future, consider including `.png` images under `/docs/` and linking them in the README.
+
+Let me know if you'd like a version with collapsible sections (`<details>`) or if you're adding Power BI/Tableau exports later.
+```
