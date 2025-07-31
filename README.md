@@ -1,43 +1,34 @@
-Here is a **complete, professional, and modern `README.md`** for your project, updated to reflect the **EDA scripts**, **customer and product reports**, and your **directory structure**.
-
----
-
-````markdown
 # 📊 Data Warehouse & Analytics Project
 
-Welcome to the Data Warehouse & Analytics Project! 🚀  
-This project demonstrates a full data lifecycle using the **Medallion Architecture** on SQL Server—from raw ingestion to business-ready insights—designed to showcase expertise in **data engineering**, **SQL development**, and **data analysis**.
+Welcome to the **Data Warehouse & Analytics Project**! 🚀  
+This project demonstrates a complete end-to-end pipeline using the **Medallion Architecture** (Bronze → Silver → Gold) on **SQL Server**. It highlights core skills in **data engineering**, **SQL development**, and **data analysis** using real-world business logic.
 
 ---
 
 ## 🧱 Architecture: Medallion Model
 
-The data warehouse is structured into **three core layers**:
+The project is organized in three layered stages:
 
-- 🔸 **Bronze Layer**: Raw ERP & CRM data ingested directly from CSV files.
-- ⚪ **Silver Layer**: Cleaned, standardized, and enriched data, integrated across systems.
-- ⭐ **Gold Layer**: Business-ready data modeled in a **star schema** to power analytics and reporting.
+- 🔸 **Bronze Layer**: Raw ERP & CRM CSV ingestion  
+- ⚪ **Silver Layer**: Data cleaning, standardization, deduplication  
+- ⭐ **Gold Layer**: Star schema, business KPIs, and analytics-ready views  
 
-Each layer is implemented using modular **T-SQL scripts**, allowing for scalability and clarity.
+Each layer is developed with **modular, maintainable T-SQL scripts**.
 
 ---
 
-## 📌 Project Objectives
+## 🎯 Project Objectives
 
-This project simulates a realistic end-to-end business intelligence pipeline:
-
-### 🏗️ Data Engineering
-- Design and build a **data warehouse** with Bronze/Silver/Gold layers.
-- Implement **ETL logic** using T-SQL.
-- Apply **data quality validation** at multiple stages.
-- Model data using **fact** and **dimension** tables (star schema).
+### 🛠️ Data Engineering
+- Build a **scalable data warehouse** using best practices
+- Implement ETL logic using **pure SQL**
+- Apply **data quality validation** across pipeline stages
+- Create a **star schema** with fact and dimension tables
 
 ### 📊 Data Analysis
-- Perform **Exploratory Data Analysis (EDA)** using SQL.
-- Generate focused reports on:
-  - **Customer segmentation**, behavior, and churn.
-  - **Product performance** over time.
-  - **Regional and seasonal trends** in sales.
+- Perform **EDA** (Exploratory Data Analysis) in SQL
+- Deliver **business insights** through custom reports
+- Analyze customer segmentation, product trends, and sales patterns
 
 ---
 
@@ -45,99 +36,41 @@ This project simulates a realistic end-to-end business intelligence pipeline:
 
 | Tool                     | Purpose                                 |
 |--------------------------|-----------------------------------------|
-| **SQL Server Express**   | Local database engine                   |
-| **SQL Server Management Studio (SSMS)** | SQL query editor and DB management |
-| **CSV Files**            | Source data from ERP and CRM systems    |
-| **Draw.io**              | Visualizing architecture and data models |
-| **Notion**               | Task tracking and project notes         |
+| SQL Server Express       | Database engine                         |
+| SQL Server Management Studio (SSMS) | SQL development + debugging         |
+| CSV Files                | Simulated ERP & CRM datasets            |
+| Draw.io                  | Architecture & schema diagrams          |
+| Notion                   | Planning, documentation, and tracking   |
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
-```bash
+```plaintext
 data-warehouse-project/
 │
-├── datasets/                           # Raw CSV files (ERP & CRM)
+├── datasets/                           # Raw ERP & CRM CSV files
 │
 ├── docs/                               # Project documentation
-│   ├── data_architecture.drawio        # Medallion model diagram
-│   ├── data_flow.drawio                # ETL process overview
-│   ├── data_models.drawio              # Dimensional model (ERD)
-│   ├── naming-conventions.md           # SQL naming standards
-│   ├── data_catalog.md                 # Data dictionary
+│   ├── data_architecture.drawio        # Medallion architecture
+│   ├── data_flow.drawio                # ETL process diagram
+│   ├── data_models.drawio              # ERD for star schema
+│   ├── naming-conventions.md           # SQL naming conventions
+│   ├── data_catalog.md                 # Dataset & column descriptions
 │
-├── scripts/                            # All SQL scripts
+├── scripts/                            # T-SQL logic by layer
 │   ├── bronze/                         # Raw data ingestion
-│   ├── silver/                         # Data cleansing and integration
-│   ├── gold/                           # Star schema and business logic
-│   ├── eda/                            # Exploratory Data Analysis queries
-│   ├── reports/                        # Business reports
-│       ├── report_customers.sql        # Customer segmentation & churn
+│   ├── silver/                         # Cleaning, joining, deduplication
+│   ├── gold/                           # Facts, dimensions, KPIs
+│   ├── eda/                            # SQL-based exploratory analysis
+│   ├── reports/                        # Final SQL business reports
+│       ├── report_customers.sql        # Customer segmentation & metrics
 │       ├── report_products.sql         # Product performance analysis
 │
-├── tests/                              # Data quality checks
-│   └── integrity_checks.sql            # Foreign key, null, duplicate validations
+├── tests/                              # SQL data quality checks
+│   └── integrity_checks.sql
 │
-├── README.md                           # Project overview
-├── LICENSE                             # MIT License
-├── .gitignore                          # Version control exclusions
-└── requirements.txt                    # Optional tools/dependencies
-````
-
----
-
-## ✅ Data Quality Focus
-
-To ensure trustworthy data analytics, the following validations were performed:
-
-* ✅ Surrogate key uniqueness in dimension tables
-* ✅ Referential integrity across fact/dimension joins
-* ✅ Schema consistency, null-checks, and outlier detection
-* ✅ Deduplication logic for Silver Layer
-
----
-
-## 📈 Reporting & Insights
-
-After building the Gold Layer, analytical insights were extracted using SQL, focusing on:
-
-* **Customer Segments**: High vs low spenders, churn patterns, frequency of orders.
-* **Product Analytics**: Top-performing categories, sales seasonality, pricing patterns.
-* **Sales Trends**: Regional patterns, monthly and yearly growth.
-
-Example queries and visuals can be found in:
-
-* `scripts/reports/report_customers.sql`
-* `scripts/reports/report_products.sql`
-
----
-
-## 🧑‍💻 About the Developer
-
-Hi, I’m **Amine Bouraoui**, an aspiring **Data Analyst & Engineer**.
-This project is part of my professional portfolio, showcasing my skills in:
-
-* Data architecture & warehousing
-* SQL development (ETL, modeling, analytics)
-* Business insight generation through data
-
-📎 [Connect with me on LinkedIn](https://www.linkedin.com/in/amine-bouraoui)
-📁 [Explore more projects on GitHub](https://github.com/aminebouraoui)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
-
-```
-
----
-
-### ✅ Tips to Finalize:
-- Replace placeholder links (LinkedIn/GitHub) with your actual profiles.
-- If you create charts or visuals in the future, consider including `.png` images under `/docs/` and linking them in the README.
-
-Let me know if you'd like a version with collapsible sections (`<details>`) or if you're adding Power BI/Tableau exports later.
-```
+├── README.md                           # 📄 Project overview (this file)
+├── LICENSE                             # 📜 MIT license
+├── .gitignore                          # 🚫 Files to exclude from Git
+└── requirements.txt                    # 🔧 Optional: tools or extensions
