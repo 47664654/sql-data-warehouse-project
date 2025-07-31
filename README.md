@@ -162,8 +162,8 @@ This project is part of my professional portfolio to showcase:
 * Real-world **business insight generation** using SQL
 * Skills in **data modeling, cleansing, transformation, and reporting**
 
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/amine-bouraoui-4b103631b/))
-🐙 [GitHub Profile](https://github.com/47664654))
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/amine-bouraoui-4b103631b/)
+🐙 [GitHub Profile](https://github.com/47664654)
 
 ---
 
