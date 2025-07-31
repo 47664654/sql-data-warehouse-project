@@ -1,7 +1,3 @@
-Here's a polished, professional, and GitHub-ready version of your README that you can copy and paste directly into your repository. It uses proper Markdown formatting, clear structure, and consistent styling for readability and presentation:
-
----
-
 # 🏦 Data Warehouse & Analytics Project
 
 Welcome to the **Data Warehouse & Analytics Project** — a complete end-to-end data pipeline built using the **Medallion Architecture (Bronze → Silver → Gold)** on **SQL Server**. This project demonstrates core competencies in data engineering, SQL development, and business analytics through real-world scenarios and workflows.
@@ -119,8 +115,8 @@ This project is part of my professional portfolio to showcase:
 - Real-world **business insight generation** using SQL
 - Skills in **data modeling, cleansing, transformation, and reporting**
 
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/amine-bouraoui)  
-🐙 [GitHub Profile](https://github.com/aminebouraoui)
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/amine-bouraoui-4b103631b/))  
+🐙 [GitHub Profile](https://github.com/47664654))
 
 ---
 
