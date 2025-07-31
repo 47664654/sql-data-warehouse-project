@@ -73,34 +73,33 @@ This project is ideal for professionals aspiring to roles like:
 
 For a complete breakdown, see [docs/requirements.md](https://github.com/47664654/sql-data-warehouse-project/tree/main/docs).
 
----
-
-## 📁 Repository Structure
-
-```
-data-warehouse-project/
+📁 data-warehouse-project/
 │
-├── datasets/                           # Raw CSV files from ERP and CRM
+├── datasets/                           # Raw CSV files from ERP and CRM systems
 │
-├── docs/                               # Documentation, models, and architecture
-│   ├── data_architecture.drawio
-│   ├── data_flow.drawio
-│   ├── data_models.drawio
-│   ├── naming-conventions.md
-│   ├── data_catalog.md
+├── docs/                               # Project documentation and diagrams
+│   ├── data_architecture.drawio        # Medallion architecture diagram
+│   ├── data_flow.drawio                # End-to-end data flow overview
+│   ├── data_models.drawio              # ERD and dimensional model design
+│   ├── naming-conventions.md           # Standard naming practices for tables and columns
+│   ├── data_catalog.md                 # Data dictionary with table/column definitions
 │
-├── scripts/                            # T-SQL scripts by layer
-│   ├── bronze/                         # Data ingestion scripts
-│   ├── silver/                         # Cleaning, deduplication, and integration
-│   ├── gold/                           # Star schema creation and analytical logic
+├── scripts/                            # SQL scripts organized by layer
+│   ├── bronze/                         # Raw data ingestion scripts (from CSV)
+│   ├── silver/                         # Data cleaning, standardization, and integration
+│   ├── gold/                           # Star schema creation (fact & dimension tables)
+│   ├── eda/                            # Exploratory Data Analysis scripts
+│   ├── reports/                        # Business-focused analytical reports
+│       ├── report_customers.sql       # Customer behavior and segmentation report
+│       ├── report_products.sql        # Product performance and sales metrics report
 │
-├── tests/                              # SQL quality checks and data validations
+├── tests/                              # SQL scripts for data quality and validation checks
 │
-├── README.md                           # Project overview and usage instructions
+├── README.md                           # Project overview, usage, and documentation
 ├── LICENSE                             # Project license (MIT by default)
-├── .gitignore                          # Files to exclude from version control
-└── requirements.txt                    # Optional: tools, extensions, or dependencies
-```
+├── .gitignore                          # Files/directories to ignore in version control
+└── requirements.txt                    # Optional: tools, dependencies, or extensions used
+
 
 ---
 
