@@ -132,26 +132,6 @@ Using the structured data warehouse, we perform **SQL-based ETL and EDA** to gen
 
 ---
 
-### 📈 Additional Insights (Planned)
-
-These features are in the roadmap for future enhancements:
-
-* **Regional sales trends** (by customer location)
-* **Monthly & quarterly KPI dashboards**
-* **Customer churn & retention modeling**
-* **Time-based analysis** using `dim_dates` for trend reporting (e.g., YoY growth, seasonality)
-
----
-
-🔍 **Explore the full reporting logic in:**
-
-* `scripts/reports/report_customers.sql`
-* `scripts/reports/report_products.sql`
-
-These SQL views are optimized for direct consumption by BI tools or stakeholders, enabling seamless integration into dashboards and executive reporting.
-
----
-
 ## 👨‍💻 About the Developer
 
 Hi! I'm **Amine Bouraoui**, a passionate **Data Analyst & Engineer**.
