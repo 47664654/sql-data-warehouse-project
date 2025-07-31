@@ -1,26 +1,32 @@
 /*
+/*
 ===============================================================================
-Product Performance Report
-===============================================================================
-Purpose:
-    - This report consolidates essential product-level insights for analytics and decision-making.
+ Script Name     : Product Report – Gold Layer
+ Purpose         : Consolidates key product metrics for analytical reporting.
 
-Key Highlights:
-    1. Extracts relevant fields: product name, category, subcategory, cost, and sales data.
-    2. Segments products based on total revenue into:
-        - High-Performers
-        - Mid-Range
-        - Low-Performers
-    3. Aggregates core product KPIs:
-        - Total Orders
-        - Total Sales Revenue
-        - Total Quantity Sold
-        - Unique Customers
-        - Product Lifespan (in months)
-    4. Computes advanced metrics:
-        - Recency (months since last sale)
-        - Average Order Revenue (AOR)
-        - Average Monthly Revenue
+ Description     : 
+    This view aggregates product-level insights and sales behaviors by:
+        1. Extracting core product and transaction data from the Gold Layer
+        2. Computing aggregated metrics per product:
+            - Total sales, quantity sold, number of orders, unique customers
+            - Product lifespan in months
+        3. Calculating key KPIs:
+            - Recency (months since last sale)
+            - Average selling price
+            - Average order revenue (AOR)
+            - Average monthly revenue
+        4. Segmenting products based on performance:
+            - High-Performer, Mid-Range, Low-Performer classifications
+
+ Usage Notes     : 
+    - Run this script after the Gold Layer is fully loaded
+    - Useful for dashboards, product performance analysis, and revenue insights
+
+ Returns         : View: gold.report_products
+
+ Author          : Amine Bouraoui
+ Created On      : 2025-07-29
+ Last Modified   : -
 ===============================================================================
 */
 
